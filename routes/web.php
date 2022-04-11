@@ -18,7 +18,7 @@ use App\Http\Controllers\HomeController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('Artista.registro');
 });
 
 Route::prefix('artista')->group(function () {
