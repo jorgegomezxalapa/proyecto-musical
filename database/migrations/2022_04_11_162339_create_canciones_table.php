@@ -15,6 +15,8 @@ return new class extends Migration
     {
         Schema::create('canciones', function (Blueprint $table) {
             $table->id();
+            $table->string('nombre');
+            $table->date('fecha_lanzamiento');
             $table->timestamps();
         });
     }

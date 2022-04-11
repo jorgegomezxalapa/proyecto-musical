@@ -15,7 +15,11 @@ return new class extends Migration
     {
         Schema::create('artista_album', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('artista_id');
+            $table->unsignedBigInteger('album_id');
             $table->timestamps();
+            $table->foreign('artista_id')->references('id')->on('artistas');
+            $table->foreign('album_id')->references('id')->on('albumes');
         });
     }
 
